@@ -1,0 +1,26 @@
+NAPOMENE:
+
+- Ako se bootstrap nece ucitati klikom na homepage.html, potrebno je unzipovati, smestiti folder u vsc(editor) i pokrenuti iz vsc(npr. live server).
+
+- Pretraga je omgucena svega i pojedinacno i istovremeno, otvara se na div koji je collapse i ima tri inputa (mogu biti i prazni i popunjeni),
+ search se aktivira na click buttona "Search"
+
+- Markiranje teksta je napravljeno kada se pretrazuju agencije ili destinacije po njihovom imenu (u tom trenutku postoje vidljive na stranici),
+ ako npr. pretrazujemo agencije po destinacijama ne mogu markirati destinaciju jer se ona ne nalazi na trenutnom prozoru
+
+- Registracija se vrsi tako sto se stisne login i u okviru toga postoji opcija za registrovanje
+
+- Brisanje i dodavanje destinacije se vrsi na admin agencije, nije u formi za edit agencije vec zasebno odmah uz agenciju,
+ dok je edit destinacije na samoj stranici gde je detaljan opsi odredjene destinacije
+
+- Kada se neka operacija izvrsi uspesno (izmeni, dodaj, obrisi) trenutna stranica se reloaduje i tako daje korisniku do znanja da je uspesno izvrsio operaciju, 
+ to nije najbolje resenje zbog DOM stabla, ali za ovakav projekat je okej ostaviti
+
+- Kod Search-a je sve case-sensitive
+
+- Sto se tice validacije: 1. datuma rodjenja provera 1900+ do 2023.05.31.
+                          2. broja telefona za agencije je XXX/XXXX-koliko god brojeva, dok je za korisnike 9 breojva
+                          3. email mora nesto pre @, onda mora par slova, pa tacka i posle tacke minimalno dva kraktera
+                          4. godina osnivanja ne moze biti preko 2023 i stavio sam da je donja granica 1000, nije toliko bitna dodnja granica
+                          5. cena i max osoba moraju biti veci od 0
+                          ostali atributu se proveravaju sa praznim stringom
